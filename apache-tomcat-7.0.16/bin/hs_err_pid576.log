@@ -1,0 +1,225 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x6f3d9074, pid=576, tid=564
+#
+# JRE version: 7.0-b140
+# Java VM: Java HotSpot(TM) Client VM (21.0-b10 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0x159074]
+#
+# Core dump written. Default location: H:\apache-tomcat-7.0.16\bin\hs_err_pid576.mdmp
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x186e1c00):  JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=564, stack(0x18a20000,0x18a70000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000c
+
+Registers:
+EAX=0x00000000, EBX=0x0464e578, ECX=0x0000000c, EDX=0x00000000
+ESP=0x18a6f540, EBP=0x18a6f54c, ESI=0x0000000c, EDI=0x000000ef
+EIP=0x6f3d9074, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x18a6f540)
+0x18a6f540:   186e1d28 0464e578 186e1c00 18a6f55c
+0x18a6f550:   6f29fc70 0000000c 000000ef 18a6f584
+0x18a6f560:   6f31db83 0464e578 186e1d28 73fde174
+0x18a6f570:   73fde15c 186e1c00 00000000 186e1d28
+0x18a6f580:   18a6f648 73fde99c 73fc63b2 186e1d28
+0x18a6f590:   187615fc 00000000 18a6f5bc 18a6f648
+0x18a6f5a0:   19c2fcb8 18a6f5f8 187615fc 18a6f5c8
+0x18a6f5b0:   73fcbd10 18a6f5c8 18a6f5fc 73fe2c68 
+
+Instructions: (pc=0x6f3d9074)
+0x6f3d9054:   cc cc cc cc cc cc cc cc cc cc cc cc 55 8b ec 57
+0x6f3d9064:   8b 7d 0c 33 c0 33 d2 85 ff 7e 2e 53 56 8b 75 08
+0x6f3d9074:   0f b7 0c 56 8d 59 ff 66 83 fb 7e 77 03 40 eb 12
+0x6f3d9084:   bb ff 07 00 00 66 3b cb 77 05 83 c0 02 eb 03 83 
+
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=
+[error occurred during error reporting (printing register info), id 0xc0000005]
+
+Stack: [0x18a20000,0x18a70000],  sp=0x18a6f540,  free space=317k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x159074]
+V  [jvm.dll+0x1fc70]
+V  [jvm.dll+0x9db83]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x19a9a400 JavaThread ""http-apr-80"-exec-7" daemon [_thread_blocked, id=3748, stack(0x1c6c0000,0x1c710000)]
+  0x19a9a000 JavaThread ""http-apr-80"-exec-6" daemon [_thread_blocked, id=4028, stack(0x1c440000,0x1c490000)]
+  0x19a99800 JavaThread ""http-apr-80"-exec-5" daemon [_thread_blocked, id=3692, stack(0x1c600000,0x1c650000)]
+  0x19a99400 JavaThread ""http-apr-80"-exec-4" daemon [_thread_blocked, id=3276, stack(0x1c490000,0x1c4e0000)]
+  0x1885d000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=3688, stack(0x1c1f0000,0x1c240000)]
+  0x19a98c00 JavaThread ""http-apr-80"-exec-3" daemon [_thread_blocked, id=3676, stack(0x1c340000,0x1c390000)]
+  0x19a98800 JavaThread ""http-apr-80"-exec-2" daemon [_thread_blocked, id=3892, stack(0x1c2d0000,0x1c320000)]
+  0x19a98000 JavaThread ""http-apr-80"-exec-1" daemon [_thread_blocked, id=1808, stack(0x1c090000,0x1c0e0000)]
+  0x19a97800 JavaThread ""ajp-apr-8009"-AsyncTimeout" daemon [_thread_blocked, id=1956, stack(0x1c140000,0x1c190000)]
+  0x19a97400 JavaThread ""ajp-apr-8009"-Acceptor-0" daemon [_thread_in_native, id=2908, stack(0x1bdb0000,0x1be00000)]
+  0x19a96c00 JavaThread ""ajp-apr-8009"-CometPoller-7" daemon [_thread_blocked, id=3960, stack(0x1c040000,0x1c090000)]
+  0x19a96800 JavaThread ""ajp-apr-8009"-CometPoller-6" daemon [_thread_blocked, id=3880, stack(0x1bec0000,0x1bf10000)]
+  0x19a96000 JavaThread ""ajp-apr-8009"-CometPoller-5" daemon [_thread_blocked, id=3828, stack(0x1b1f0000,0x1b240000)]
+  0x19a95c00 JavaThread ""ajp-apr-8009"-CometPoller-4" daemon [_thread_blocked, id=3916, stack(0x1be10000,0x1be60000)]
+  0x19a95400 JavaThread ""ajp-apr-8009"-CometPoller-3" daemon [_thread_blocked, id=2328, stack(0x1b0b0000,0x1b100000)]
+  0x19a94c00 JavaThread ""ajp-apr-8009"-CometPoller-2" daemon [_thread_blocked, id=1764, stack(0x1baf0000,0x1bb40000)]
+  0x191b0800 JavaThread ""ajp-apr-8009"-CometPoller-1" daemon [_thread_blocked, id=2588, stack(0x1bc20000,0x1bc70000)]
+  0x191b0400 JavaThread ""ajp-apr-8009"-CometPoller-0" daemon [_thread_blocked, id=3344, stack(0x1ba50000,0x1baa0000)]
+  0x191afc00 JavaThread ""ajp-apr-8009"-Poller-7" daemon [_thread_blocked, id=2804, stack(0x1bbb0000,0x1bc00000)]
+  0x191af800 JavaThread ""ajp-apr-8009"-Poller-6" daemon [_thread_blocked, id=3508, stack(0x1b810000,0x1b860000)]
+  0x191af000 JavaThread ""ajp-apr-8009"-Poller-5" daemon [_thread_blocked, id=3316, stack(0x1ba00000,0x1ba50000)]
+  0x191ae800 JavaThread ""ajp-apr-8009"-Poller-4" daemon [_thread_blocked, id=2704, stack(0x1b9b0000,0x1ba00000)]
+  0x191ae400 JavaThread ""ajp-apr-8009"-Poller-3" daemon [_thread_blocked, id=3844, stack(0x1b8b0000,0x1b900000)]
+  0x191adc00 JavaThread ""ajp-apr-8009"-Poller-2" daemon [_thread_blocked, id=1820, stack(0x1b350000,0x1b3a0000)]
+  0x191ad800 JavaThread ""ajp-apr-8009"-Poller-1" daemon [_thread_blocked, id=2640, stack(0x1b3a0000,0x1b3f0000)]
+  0x191ad000 JavaThread ""ajp-apr-8009"-Poller-0" daemon [_thread_blocked, id=3612, stack(0x1b300000,0x1b350000)]
+  0x191acc00 JavaThread ""http-apr-80"-AsyncTimeout" daemon [_thread_blocked, id=3952, stack(0x1afd0000,0x1b020000)]
+  0x191ac400 JavaThread ""http-apr-80"-Acceptor-0" daemon [_thread_in_native, id=2928, stack(0x1b110000,0x1b160000)]
+  0x191abc00 JavaThread ""http-apr-80"-Sendfile-0" daemon [_thread_blocked, id=3696, stack(0x1af80000,0x1afd0000)]
+  0x191ab800 JavaThread ""http-apr-80"-CometPoller-7" daemon [_thread_blocked, id=2208, stack(0x1a470000,0x1a4c0000)]
+  0x191ab000 JavaThread ""http-apr-80"-CometPoller-6" daemon [_thread_blocked, id=2952, stack(0x1ae70000,0x1aec0000)]
+  0x191aac00 JavaThread ""http-apr-80"-CometPoller-5" daemon [_thread_blocked, id=1784, stack(0x1a930000,0x1a980000)]
+  0x191aa400 JavaThread ""http-apr-80"-CometPoller-4" daemon [_thread_blocked, id=3036, stack(0x1ad70000,0x1adc0000)]
+  0x191aa000 JavaThread ""http-apr-80"-CometPoller-3" daemon [_thread_blocked, id=3492, stack(0x1ab20000,0x1ab70000)]
+  0x191a9800 JavaThread ""http-apr-80"-CometPoller-2" daemon [_thread_blocked, id=3180, stack(0x1aad0000,0x1ab20000)]
+  0x191a9000 JavaThread ""http-apr-80"-CometPoller-1" daemon [_thread_blocked, id=2296, stack(0x1ab80000,0x1abd0000)]
+  0x18762c00 JavaThread ""http-apr-80"-CometPoller-0" daemon [_thread_blocked, id=3260, stack(0x19610000,0x19660000)]
+  0x19438000 JavaThread ""http-apr-80"-Poller-7" daemon [_thread_blocked, id=2384, stack(0x1aa80000,0x1aad0000)]
+  0x19437800 JavaThread ""http-apr-80"-Poller-6" daemon [_thread_blocked, id=1028, stack(0x1a980000,0x1a9d0000)]
+  0x199b7800 JavaThread ""http-apr-80"-Poller-5" daemon [_thread_blocked, id=4072, stack(0x1a6b0000,0x1a700000)]
+  0x1944e800 JavaThread ""http-apr-80"-Poller-4" daemon [_thread_blocked, id=2620, stack(0x1a630000,0x1a680000)]
+  0x1944e000 JavaThread ""http-apr-80"-Poller-3" daemon [_thread_blocked, id=1984, stack(0x1a5d0000,0x1a620000)]
+  0x19457000 JavaThread ""http-apr-80"-Poller-2" daemon [_thread_blocked, id=3992, stack(0x1a250000,0x1a2a0000)]
+  0x19456800 JavaThread ""http-apr-80"-Poller-1" daemon [_thread_blocked, id=3600, stack(0x1a4d0000,0x1a520000)]
+  0x194f5c00 JavaThread ""http-apr-80"-Poller-0" daemon [_thread_blocked, id=4060, stack(0x1a300000,0x1a350000)]
+  0x19405800 JavaThread "ContainerBackgroundProcessor[StandardEngine[Catalina]]" daemon [_thread_blocked, id=2752, stack(0x19910000,0x19960000)]
+  0x19325800 JavaThread "GC Daemon" daemon [_thread_blocked, id=3784, stack(0x19780000,0x197d0000)]
+  0x18707400 JavaThread "Service Thread" daemon [_thread_blocked, id=2536, stack(0x183a0000,0x183f0000)]
+  0x186f4400 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=3580, stack(0x188c0000,0x18910000)]
+  0x186eb000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=3820, stack(0x18e50000,0x18ea0000)]
+=>0x186e1c00 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_vm, id=564, stack(0x18a20000,0x18a70000)]
+  0x186dec00 JavaThread "Attach Listener" daemon [_thread_blocked, id=2976, stack(0x18af0000,0x18b40000)]
+  0x186db800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3912, stack(0x18a80000,0x18ad0000)]
+  0x02380c00 JavaThread "Finalizer" daemon [_thread_blocked, id=2572, stack(0x18640000,0x18690000)]
+  0x0237f000 JavaThread "Reference Handler" daemon [_thread_blocked, id=232, stack(0x18480000,0x184d0000)]
+  0x02293c00 JavaThread "main" [_thread_in_native, id=2292, stack(0x01dd0000,0x01e20000)]
+
+Other Threads:
+  0x02378000 VMThread [stack: 0x18520000,0x18570000] [id=3048]
+  0x18722800 WatcherThread [stack: 0x190c0000,0x19110000] [id=1624]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 7488K, used 3988K [0x04390000, 0x04ba0000, 0x098e0000)
+  eden space 6720K,  47% used [0x04390000, 0x046b52c0, 0x04a20000)
+  from space 768K, 100% used [0x04a20000, 0x04ae0000, 0x04ae0000)
+  to   space 768K,   0% used [0x04ae0000, 0x04ae0000, 0x04ba0000)
+ tenured generation   total 16484K, used 11208K [0x098e0000, 0x0a8f9000, 0x14390000)
+   the space 16484K,  67% used [0x098e0000, 0x0a3d2210, 0x0a3d2400, 0x0a8f9000)
+ compacting perm gen  total 19712K, used 19486K [0x14390000, 0x156d0000, 0x18390000)
+   the space 19712K,  98% used [0x14390000, 0x15697848, 0x15697a00, 0x156d0000)
+No shared spaces configured.
+
+Code Cache  [0x02390000, 0x026b8000, 0x04390000)
+ total_blobs=1470 nmethods=1294 adapters=118 free_code_cache=29728Kb largest_free_block=30253888
+
+Dynamic libraries:
+0x00110000 - 0x0013e000 	C:\Program Files (x86)\Java\jdk1.7.0\bin\java.exe
+0x77ba0000 - 0x77d20000 	C:\Windows\SysWOW64\ntdll.dll
+0x76640000 - 0x76750000 	C:\Windows\syswow64\kernel32.dll
+0x765b0000 - 0x765f6000 	C:\Windows\syswow64\KERNELBASE.dll
+0x767e0000 - 0x76880000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76880000 - 0x7692c000 	C:\Windows\syswow64\msvcrt.dll
+0x76580000 - 0x76599000 	C:\Windows\SysWOW64\sechost.dll
+0x76eb0000 - 0x76fa0000 	C:\Windows\syswow64\RPCRT4.dll
+0x75290000 - 0x752f0000 	C:\Windows\syswow64\SspiCli.dll
+0x75280000 - 0x7528c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x75320000 - 0x75420000 	C:\Windows\syswow64\USER32.dll
+0x76440000 - 0x764d0000 	C:\Windows\syswow64\GDI32.dll
+0x765a0000 - 0x765aa000 	C:\Windows\syswow64\LPK.dll
+0x763a0000 - 0x7643d000 	C:\Windows\syswow64\USP10.dll
+0x750c0000 - 0x7525e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_41e6975e2bd6f2b2\COMCTL32.dll
+0x762b0000 - 0x76307000 	C:\Windows\syswow64\SHLWAPI.dll
+0x75600000 - 0x75660000 	C:\Windows\system32\IMM32.DLL
+0x76c10000 - 0x76cdc000 	C:\Windows\syswow64\MSCTF.dll
+0x73ff0000 - 0x740ae000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\msvcr100.dll
+0x6f280000 - 0x6f594000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\client\jvm.dll
+0x746d0000 - 0x746d7000 	C:\Windows\system32\WSOCK32.dll
+0x76600000 - 0x76635000 	C:\Windows\syswow64\WS2_32.dll
+0x75420000 - 0x75426000 	C:\Windows\syswow64\NSI.dll
+0x74990000 - 0x749c2000 	C:\Windows\system32\WINMM.dll
+0x750b0000 - 0x750bc000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\verify.dll
+0x740d0000 - 0x740f0000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\java.dll
+0x75430000 - 0x75435000 	C:\Windows\syswow64\PSAPI.DLL
+0x73fc0000 - 0x73fea000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\jdwp.dll
+0x740c0000 - 0x740c7000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\npt.dll
+0x73f30000 - 0x73f43000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\zip.dll
+0x74630000 - 0x74638000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\dt_socket.dll
+0x73c10000 - 0x73c4c000 	C:\Windows\system32\mswsock.dll
+0x73820000 - 0x73825000 	C:\Windows\System32\wshtcpip.dll
+0x73f10000 - 0x73f24000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\net.dll
+0x739c0000 - 0x739c6000 	C:\Windows\System32\wship6.dll
+0x73fb0000 - 0x73fbf000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\nio.dll
+0x73f00000 - 0x73f09000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\management.dll
+0x18f80000 - 0x19057000 	H:\apache-tomcat-7.0.16\bin\tcnative-1.dll
+0x75010000 - 0x75026000 	C:\Windows\system32\CRYPTSP.dll
+0x74fb0000 - 0x74feb000 	C:\Windows\system32\rsaenh.dll
+0x73650000 - 0x73670000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\sunec.dll
+0x73640000 - 0x73649000 	C:\Program Files (x86)\Java\jdk1.7.0\jre\bin\sunmscapi.dll
+0x771c0000 - 0x772dd000 	C:\Windows\syswow64\CRYPT32.dll
+0x752f0000 - 0x752fc000 	C:\Windows\syswow64\MSASN1.dll
+0x74f90000 - 0x74fa7000 	C:\Windows\system32\USERENV.dll
+0x74f70000 - 0x74f7b000 	C:\Windows\system32\profapi.dll
+0x73c60000 - 0x73c70000 	C:\Windows\system32\NLAapi.dll
+0x73c50000 - 0x73c60000 	C:\Windows\system32\napinsp.dll
+0x73bc0000 - 0x73c04000 	C:\Windows\system32\DNSAPI.dll
+0x73bb0000 - 0x73bb8000 	C:\Windows\System32\winrnr.dll
+0x74e00000 - 0x74e1c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x74b80000 - 0x74b87000 	C:\Windows\system32\WINNSI.DLL
+0x74ae0000 - 0x74ae6000 	C:\Windows\system32\rasadhlp.dll
+0x74a10000 - 0x74a48000 	C:\Windows\System32\fwpuclnt.dll
+0x73c70000 - 0x73d5b000 	C:\Windows\system32\DBGHELP.DLL
+
+VM Arguments:
+jvm_args: -Djava.util.logging.config.file=H:\apache-tomcat-7.0.16\conf\logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n -Djava.endorsed.dirs=H:\apache-tomcat-7.0.16\endorsed -Dcatalina.base=H:\apache-tomcat-7.0.16 -Dcatalina.home=H:\apache-tomcat-7.0.16 -Djava.io.tmpdir=H:\apache-tomcat-7.0.16\temp 
+java_command: org.apache.catalina.startup.Bootstrap start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.7.0
+JRE_HOME=C:\Program Files (x86)\Java\jdk1.7.0
+CLASSPATH=H:\apache-tomcat-7.0.16\bin\bootstrap.jar;H:\apache-tomcat-7.0.16\bin\tomcat-juli.jar
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\EasyFrom Inc\;C:\Program Files (x86)\Java\jdk1.7.0;C:\Program Files (x86)\Common Files\Easysoft\Shared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\apache-ant-1.8.2\bin;C:\apache-maven-3.0.3\bin;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 37 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows NT 6.1 Build 7601 Service Pack 1
+
+CPU:total 1 (1 cores per cpu, 1 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt
+
+Memory: 4k page, physical 4193784k(2503792k free), swap 8385720k(6594312k free)
+
+vm_info: Java HotSpot(TM) Client VM (21.0-b10) for windows-x86 JRE (1.7.0-ea-b140), built on Apr 28 2011 02:30:22 by "java_re" with unknown MS VC++:1600
+
+time: Sat Sep 17 09:02:58 2011
+elapsed time: 707 seconds
+

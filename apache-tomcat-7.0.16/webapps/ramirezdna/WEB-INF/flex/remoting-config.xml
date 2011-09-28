@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="remoting-service" class="flex.messaging.services.RemotingService" messageTypes="flex.messaging.messages.RemotingMessage">
+	<adapters>
+		<adapter-definition id="java-object" class="flex.messaging.services.remoting.adapters.JavaAdapter" default="true"/>
+	</adapters>
+	<default-channels>
+		<channel ref="my-amf"/>
+	</default-channels>
+	<destination id="TBGROUPTABServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBGROUPTABService</source>
+		</properties>
+	</destination> 
+	<destination id="TBQUERYVIEWServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBQUERYVIEWService</source>
+		</properties>
+	</destination> 
+	<destination id="TBSQLQUERYServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBSQLQUERYService</source>
+		</properties>
+	</destination> 
+	<destination id="TBSQLFILTERServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBSQLFILTERService</source>
+		</properties>
+	</destination> 
+	<destination id="TBGROUPTYPEServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBGROUPTYPEService</source>
+		</properties>
+	</destination> 
+	<destination id="TBQUERYNODEServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBQUERYNODEService</source>
+		</properties>
+	</destination> 
+	<destination id="TBTABServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBTABService</source>
+		</properties>
+	</destination> 
+	<destination id="TBUSERLOGINServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBUSERLOGINService</source>
+		</properties>
+	</destination> 
+	<destination id="TBQUERYCHILDServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBQUERYCHILDService</source>
+		</properties>
+	</destination> 
+	<destination id="TBQUERYVIEWNODEServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBQUERYVIEWNODEService</source>
+		</properties>
+	</destination> 
+	<destination id="TBSQLDATAITEMServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBSQLDATAITEMService</source>
+		</properties>
+	</destination> 
+	<destination id="TBSQLREFERENCEServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBSQLREFERENCEService</source>
+		</properties>
+	</destination> 
+	<destination id="PTEDNAService">
+		<properties>
+			<source>com.ptedna.dao.util.PTEDNAService</source>
+		</properties>
+	</destination> 
+	<destination id="TBDATASOURCEServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBDATASOURCEService</source>
+		</properties>
+	</destination> 
+	<destination id="TBDATAREFERENCEServiceDestination">
+		<properties>
+			<source>com.adhocquery.service.TBDATAREFERENCEService</source>
+		</properties>
+	</destination> 
+	<destination id="TopicServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.TopicService</source>
+		</properties>
+	</destination> 
+	<destination id="ProcessTopicServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.ProcessTopicService</source>
+		</properties>
+	</destination> 
+	<destination id="PropertyServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.PropertyService</source>
+		</properties>
+	</destination> 
+	<destination id="LogServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.LogService</source>
+		</properties>
+	</destination> 
+	<destination id="ProcessServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.ProcessService</source>
+		</properties>
+	</destination> 
+	<destination id="StatusServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.StatusService</source>
+		</properties>
+	</destination> 
+	<destination id="HostServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.HostService</source>
+		</properties>
+	</destination> 
+	<destination id="TopicPropertyServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.TopicPropertyService</source>
+		</properties>
+	</destination> 
+	<destination id="HostProcessServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.HostProcessService</source>
+		</properties>
+	</destination> 
+	<destination id="TopicTypeServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.TopicTypeService</source>
+		</properties>
+	</destination> 
+	<destination id="ProcessPropertyServiceDestination">
+		<properties>
+			<source>com.metadatadna.service.ProcessPropertyService</source>
+		</properties>
+	</destination> 
+	<destination id="FixMessageStoreServiceDestination">
+		<properties>
+			<source>com.fixmessagestore.service.FixMessageStoreService</source>
+		</properties>
+	</destination> 
+</service>
+

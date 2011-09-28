@@ -1,0 +1,11 @@
+jdbc.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver
+jdbc.url=jdbc:sqlserver://ROBIN-DELL;database=FixMessageStore;
+jdbc.user=sa
+jdbc.password=rq74we56
+minLimit=50
+maxLimit= 100
+initialLimit= 50
+logSQL=true
+logERROR=true
+logALL=true
+rootDir=ramirezdna
